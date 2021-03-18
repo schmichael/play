@@ -52,7 +52,7 @@ func main() {
 		log.Fatalf("Dial err: %v", err)
 	}
 
-	log.Printf("Close err: %s", conn.Close())
+	log.Printf("Close err: %v", conn.Close())
 
 	sigCh := make(chan os.Signal, 1)
 	signal.Notify(sigCh, os.Interrupt)
